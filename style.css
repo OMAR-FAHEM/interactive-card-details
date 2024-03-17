@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+img {
+  max-width: 100%;
+}
+.pc-image {
+  display: none;
+}
+.card-front {
+  position: absolute;
+  z-index: 10;
+  top: 120px;
+  left: 20px;
+}
+.wrapper {
+  position: relative;
+}
+.card-front .front-body {
+  width: 270px;
+}
+.card-front .card-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 65px;
+}
+.card-front .card-number {
+  position: absolute;
+  top: 80px;
+  left: 30px;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+.card-front .name {
+  position: absolute;
+  top: 120px;
+  color: white;
+  left: 10px;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+.card-front .ex-date {
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  color: white;
+  font-size: 15px;
+}
+.card-back {
+  position: absolute;
+  left: 80px;
+  top: 35px;
+}
+.card-back .back-body {
+  width: 270px;
+}
+.card-back .cvc-number {
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.top-section {
+  margin-bottom: 50px;
+}
+.inputs-section {
+  padding: 15px;
+}
+.inputs-section.hide{
+  display: none;
+}
+.inputs-section p {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: hsl(278, 68%, 11%);
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin: 5px 0;
+}
+input {
+  padding: 10px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  border: 1px solid hsl(0, 2%, 63%);
+}
+input:focus {
+  outline: none;
+}
+input::placeholder {
+  color: hsl(0, 2%, 63%);
+}
+.name-input,
+.number-input {
+  width: 100%;
+}
+.date-cvc-box {
+  display: flex;
+  align-items: center;
+}
+.user-date,
+.user-cvc {
+  height: 140px;
+}
+.user-date {
+  flex-grow: 2;
+}
+.user-date .box-wrapper {
+  display: flex;
+}
+.user-date label {
+  white-space: nowrap;
+}
+
+.month-box,
+.year-box {
+  width: 100%;
+  margin-right: 10px;
+}
+.user-date input {
+  width: 100%;
+  display: block;
+}
+.inputs-section .user-cvc {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+.cvc-input {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .mobile-image {
+    display: none;
+  }
+  .pc-image {
+    display: block;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 1200px;
+    background-color: #21092f0d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+  }
+  .inputs-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .card-front {
+    top: 90px;
+    left: 240px;
+  }
+  .card-back {
+    left: 270px;
+    top: 260px;
+  }
+  .top-section {
+    margin: 0;
+  }
+}
+button {
+  width: 100%;
+  padding: 15px;
+  color: white;
+  background-color: hsl(278, 68%, 11%);
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.error {
+  color: hsl(0, 100%, 66%);
+  font-size: 12px;
+  font-weight: 500;
+}
+.success {
+      width: 300px;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+.success.show{
+  display: block;
+}
+
+.success h2 {
+  letter-spacing: 6px;
+  margin: 20px 0;
+}
+.success p {
+  color: hsl(0, 1%, 45%);
+  font-size: 18px;
+  font-weight: 500;
+}
+.success button {
+  margin-top: 30px;
+}
